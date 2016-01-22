@@ -1,0 +1,21 @@
+{
+  "_comment1": "Time between checking what services are up",
+  "scan-rate": 45,
+
+  "services": [
+    {
+      "package": "my-service-package",
+      "version": "promoted",
+
+      "_comment1": "name is required!",
+      "name": "my-service",
+
+      "_comment2": "automatic selection not supported at this time",
+      "coordinator": "coord1",
+
+      "strings": {
+        "my_key": "my_value"
+      }
+    }
+  ]
+}

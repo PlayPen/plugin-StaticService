@@ -1,0 +1,5 @@
+{
+  "id": "StaticService",
+  "version": "1.0",
+  "main": "io.playpen.plugin.staticservice.StaticServicePlugin"
+}
