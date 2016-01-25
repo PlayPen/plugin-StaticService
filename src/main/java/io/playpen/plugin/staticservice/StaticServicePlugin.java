@@ -67,6 +67,7 @@ public class StaticServicePlugin extends AbstractPlugin {
     public void scan() {
         if (!isScanning.compareAndSet(false, true)) {
             Network.get().pluginMessage(this, "log", "Scan already in progress");
+            return;
         }
 
         for (StaticService service : services) {
@@ -109,5 +110,7 @@ public class StaticServicePlugin extends AbstractPlugin {
                 Network.get().provision(p3, service.getName(), service.getStrings(), coord.getUuid());
             }
         }
+
+        isScanning.set(false);
     }
 }
