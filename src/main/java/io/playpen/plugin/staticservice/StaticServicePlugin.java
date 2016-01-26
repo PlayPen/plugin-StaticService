@@ -61,6 +61,8 @@ public class StaticServicePlugin extends AbstractPlugin {
 
         log.info("Maintaining " + services.size() + " static services (scan interval: " + scanRate + ")");
 
+        Network.get().getEventManager().registerListener(new StaticServiceListener());
+
         return true;
     }
 
