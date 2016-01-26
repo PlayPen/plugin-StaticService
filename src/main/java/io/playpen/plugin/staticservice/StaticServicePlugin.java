@@ -35,6 +35,8 @@ public class StaticServicePlugin extends AbstractPlugin {
 
     @Override
     public boolean onStart() {
+        instance = this;
+        
         scanRate = getConfig().getLong("scan-rate");
 
         JSONArray serviceList = getConfig().getJSONArray("services");
